@@ -1,0 +1,108 @@
+DROP DATABASE IF EXISTS Testing_System_Assignment_1;
+CREATE DATABASE    		Testing_System_Assignment_1;
+USE 					Testing_System_Assignment_1;
+
+
+DROP TABLE IF EXISTS 	Department;
+CREATE TABLE			Department(
+DepartmentID INT,
+DepartmentName VARCHAR(50)
+);
+
+DROP TABLE IF EXISTS 	Position ;
+CREATE TABLE Position (
+PositionID INT,
+PositionName VARCHAR(50)
+);
+
+
+DROP TABLE IF EXISTS 	Accountt;
+CREATE TABLE 			Accountt(
+AccountID INT,
+Email VARCHAR(50),
+Username VARCHAR(50),
+Fullname VARCHAR(50),
+departmentID INT,
+positionID INT,
+createdate DATE
+);
+
+
+DROP TABLE IF EXISTS groupp;
+CREATE TABLE		 groupp(
+groupID INT,
+groupname VARCHAR(50),
+creatorID INT,
+createdate DATE
+);
+
+
+DROP TABLE IF EXISTS grouppaccount;
+CREATE TABLE 		 grouppaccount(
+groupID INT,
+accountID INT,
+joindate DATE
+);
+
+
+
+DROP TABLE IF EXISTS typequestion;
+CREATE TABLE		 typequestion(
+typeID INT,
+typename VARCHAR(50)
+);
+
+
+
+DROP TABLE IF EXISTS CategoryQuestion;
+CREATE TABLE		 CategoryQuestion(
+CatergoryID INT,
+CategoryName VARCHAR(50)
+);
+
+
+
+DROP TABLE IF EXISTS Question;
+CREATE TABLE		 Question(
+QuestionID INT,
+Content VARCHAR(200),
+CategoryID INT,
+TypeID INT,
+CreatorID INT,
+CreateDate DATE
+);
+
+
+
+DROP TABLE IF EXISTS  Answer;
+CREATE TABLE		  Answer(
+AnswerID INT,
+Content VARCHAR(200),
+QuestionID INT,
+isCorrect BIT
+);
+
+
+DROP TABLE IF EXISTS	Exam;
+CREATE TABLE			Exam(
+ExamID                  INT,
+Codes                   VARCHAR(50),
+Title                   VARCHAR(100),
+CategoryID              INT,
+Duration 				VARCHAR(50),
+CreatorID  				INT,
+CreateDate				DATE
+);
+
+
+
+DROP TABLE IF EXISTS	ExamQuestion;
+CREATE TABLE			ExamQuestion(
+ExamID					INT,
+QuestionID				INT
+);
+
+
+
+
+
