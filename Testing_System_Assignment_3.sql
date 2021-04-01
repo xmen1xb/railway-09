@@ -120,6 +120,7 @@ VALUE					('2','3'),
                         ('5','12'),
                         ('6','9')
                         ;
+-- bai tap testing system 3
 select* from department;
 select departmentid from department where DepartmentName = 'Sale';
 select  max(fullname) from `account`;
